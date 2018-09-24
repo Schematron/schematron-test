@@ -33,5 +33,13 @@ teardown() {
 	echo "$output"
     [ "$status" -eq 0 ]
     [[ "${output}" =~ "failed: 0" ]]
-    [[ "${output}" =~ "BUILD SUCCESSFUL" ]]
+    [[ "${output}" =~ "# Done." ]]
+}
+
+@test "schematron/universalTests-xslt2.xspec" {
+    run ${XSPEC_HOME}/bin/xspec.sh -s schematron/universalTests-xslt2.xspec
+	echo "$output"
+    [ "$status" -eq 0 ]
+    [[ "${output}" =~ "failed: 0" ]]
+    [[ "${output}" =~ "# Done." ]]
 }
