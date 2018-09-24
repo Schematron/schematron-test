@@ -27,7 +27,7 @@ teardown() {
 }
 
 @test "schematron/universalTests.xspec" {
-    run ${XSPEC_HOME}/bin/xspec.sh -s schematron/universalTests.xspec
+    run $XSPEC_HOME/bin/xspec.sh -s schematron/universalTests.xspec
 	echo "$output"
     [ "$status" -eq 0 ]
     [[ "${output}" =~ "failed: 0" ]]
