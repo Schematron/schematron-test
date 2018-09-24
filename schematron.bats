@@ -19,21 +19,21 @@
 #
 #===============================================================================
 
-setup() {
-  BLAH="blah"
-}
+#setup() {
+#  BLAH="blah"
+#}
 
 
-teardown() {
-  BLAH="blah"
-}
+#teardown() {
+#  BLAH="blah"
+#}
 
 @test "schematron/universalTests.xspec" {
     run ${XSPEC_HOME}/bin/xspec.sh -s schematron/universalTests.xspec
 	echo "$output"
     [ "$status" -eq 0 ]
     [[ "${output}" =~ "failed: 0" ]]
-    [[ "${output}" =~ "# Done." ]]
+    [[ "${output}" =~ "Done." ]]
 }
 
 @test "schematron/universalTests-xslt2.xspec" {
@@ -41,5 +41,5 @@ teardown() {
 	echo "$output"
     [ "$status" -eq 0 ]
     [[ "${output}" =~ "failed: 0" ]]
-    [[ "${output}" =~ "# Done." ]]
+    [[ "${output}" =~ "Done." ]]
 }
