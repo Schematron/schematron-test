@@ -28,18 +28,20 @@
 #  BLAH="blah"
 #}
 
-@test "schematron/universalTests.xspec" {
-    run ${XSPEC_HOME}/bin/xspec.sh -s schematron/universalTests.xspec
-	echo "$output"
+
+function xspec_schematron {
+    run ${XSPEC_HOME}/bin/xspec.sh -s ${1}
+    echo "$output"
     [ "$status" -eq 0 ]
     [[ "${output}" =~ "failed: 0" ]]
     [[ "${output}" =~ "Done." ]]
+    return $status
+}
+
+@test "schematron/universalTests.xspec" {
+    xspec_schematron schematron/universalTests.xspec
 }
 
 @test "schematron/universalTests-xslt2.xspec" {
-    run ${XSPEC_HOME}/bin/xspec.sh -s schematron/universalTests-xslt2.xspec
-	echo "$output"
-    [ "$status" -eq 0 ]
-    [[ "${output}" =~ "failed: 0" ]]
-    [[ "${output}" =~ "Done." ]]
+    xspec_schematron schematron/universalTests-xslt2.xspec
 }
