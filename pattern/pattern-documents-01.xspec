@@ -1,0 +1,9 @@
+<description xmlns="http://www.jenitennison.com/xslt/xspec" schematron="pattern-documents-01.sch">
+  <scenario label="Subordinate documents">
+    <context>
+      <document name="first" xmlns=""/>
+    </context>
+    <expect-not-report id="pattern-documents-01a"/>
+    <expect-report id="pattern-documents-01b"/>
+  </scenario>
+</description>
