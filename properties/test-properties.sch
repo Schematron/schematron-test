@@ -1,7 +1,7 @@
 
 <schema xmlns="http://purl.oclc.org/dsdl/schematron"
   xmlns:zzz="zzzz"
-	queryLanguageBinding="xslt2">
+	queryBinding="xslt2">
 
   <title>Dog Stuff</title>
   <p> hi </p>

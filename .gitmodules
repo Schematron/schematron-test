@@ -1,3 +1,0 @@
-[submodule "xspec"]
-	path = xspec-dist
-	url = https://github.com/xspec/xspec.git
